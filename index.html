@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <form action="response.html" target="_blank">
+      <h2>🎓 Course Registration Form 🎓</h2>
+
+      <fieldset>
+        <legend>Personal Details</legend>
+        <table>
+          <tr>
+            <td><label for="fn">First Name</label></td>
+            <td>
+              <input
+                type="text"
+                id="fn"
+                name="firstname"
+                minlength="3"
+                maxlength="20"
+                required
+                placeholder="Enter Your First Name"
+              />
+              <p class="hint">Enter your first name (min 3 characters)</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="ln">Last Name</label></td>
+            <td>
+              <input
+                type="text"
+                id="ln"
+                name="lastname"
+                minlength="3"
+                maxlength="20"
+                placeholder="Enter Your Surname"
+              />
+              <p class="hint">Enter your last name (optional)</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="mob">Mobile Number</label></td>
+            <td>
+              <input
+                type="tel"
+                id="mob"
+                name="mobile"
+                maxlength="15"
+                required
+                placeholder="+91 XXXXXXXXXX"
+              />
+              <p class="hint">Enter a valid 10-digit mobile number</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="mail">Email</label></td>
+            <td class="with-icons">
+              <input
+                type="email"
+                id="mail"
+                name="email"
+                required
+                placeholder="Eg: abcd@gmail.com"
+              />
+              <p class="hint">Enter a valid email address</p>
+              <img
+                class="valid"
+                src="https://cdn-icons-png.flaticon.com/128/845/845646.png"
+                alt="valid"
+              />
+              <img
+                class="invalid"
+                src="https://cdn-icons-png.flaticon.com/128/1828/1828665.png"
+                alt="invalid"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="pwd">Password</label></td>
+            <td>
+              <input
+                type="password"
+                id="pwd"
+                name="password"
+                minlength="8"
+                required
+                placeholder="Min 8 Characters"
+              />
+              <p class="hint">
+                Must include uppercase, lowercase & special symbol
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="cpwd">Confirm Password</label></td>
+            <td>
+              <input
+                type="password"
+                id="cpwd"
+                minlength="8"
+                required
+                placeholder="Re-enter Password"
+              />
+              <p class="hint">Must match the above password</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="dob">Date Of Birth</label></td>
+            <td>
+              <input type="date" id="dob" required />
+              <p class="hint">Select your date of birth</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label>Gender</label></td>
+            <td class="radio-group">
+              <input
+                type="radio"
+                name="gender"
+                id="male"
+                value="male"
+                required
+              /><label for="male">Male</label>
+              <input
+                type="radio"
+                name="gender"
+                id="female"
+                value="female"
+              /><label for="female">Female</label>
+              <input
+                type="radio"
+                name="gender"
+                id="others"
+                value="others"
+              /><label for="others">Others</label>
+              <p class="hint">Select your gender</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="country">Select Country</label></td>
+            <td>
+              <select id="country" name="country" required>
+                <option value="">** Select Country **</option>
+                <option value="india">India</option>
+                <option value="usa">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+                <option value="germany">Germany</option>
+                <option value="france">France</option>
+                <option value="italy">Italy</option>
+                <option value="japan">Japan</option>
+                <option value="south korea">South Korea</option>
+                <option value="brazil">Brazil</option>
+                <option value="russia">Russia</option>
+                <option value="mexico">Mexico</option>
+                <option value="south africa">South Africa</option>
+              </select>
+              <p class="hint">Choose your country</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="pic">Upload Picture</label></td>
+            <td>
+              <input type="file" id="pic" />
+              <p class="hint">Upload a profile picture (optional)</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="btn-center">
+              <input type="reset" value="Reset" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset>
+        <legend>Course Details</legend>
+        <table>
+          <tr>
+            <td><label for="course">Select Course</label></td>
+            <td>
+              <select id="course" name="course" required>
+                <option value="">** Select Course **</option>
+                <option value="Java">Java Full Stack</option>
+                <option value="Python">Python Full Stack</option>
+                <option value="MERN">MERN Stack</option>
+                <option value="MEAN">MEAN Stack</option>
+              </select>
+              <p class="hint">Choose the course you want to join</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label>Department</label></td>
+            <td class="radio-group">
+              <input type="radio" name="dept" value="cse" /><label>CSE</label>
+              <input type="radio" name="dept" value="ece" /><label>ECE</label>
+              <input type="radio" name="dept" value="eee" /><label>EEE</label>
+              <input type="radio" name="dept" value="mech" /><label>Mech</label>
+              <input type="radio" name="dept" value="civil" /><label
+                >Civil</label
+              >
+              <p class="hint">Select your engineering branch</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label>Delivery Mode</label></td>
+            <td class="radio-group">
+              <input type="radio" name="mode" value="online" required /><label
+                >Online</label
+              >
+              <input type="radio" name="mode" value="offline" /><label
+                >Offline</label
+              >
+              <p class="hint">Choose how you want to attend classes</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label>Your Feedback</label></td>
+            <td>
+              <textarea
+                rows="4"
+                placeholder="Write your feedback here..."
+              ></textarea>
+              <p class="hint">Give your feedback (optional)</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="btn-center">
+              <input type="submit" value="Submit" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </body>
+</html>
